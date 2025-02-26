@@ -41,7 +41,7 @@ export function ReviewCard({ name, review }: { name: string; review: string }) {
           </Avatar>
           <p className="text-sm font-medium">{name}</p>
         </div>
-        <p className="text-center">"{review}"</p>
+        <p className="text-center">&quot;{review}&quot;</p>
       </CardContent>
     </Card>
   );
