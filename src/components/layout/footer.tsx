@@ -12,12 +12,12 @@ export default function Footer() {
           <h2 className="text-lg font-semibold">Planetary</h2>
           <ul className="mt-2 space-y-1">
             <li>
-              <Link className="hover:text-primary/60" href="#">
+              <Link className="hover:text-primary/60" href="/about">
                 About us
               </Link>
             </li>
             <li>
-              <Link className="hover:text-primary/60" href="#">
+              <Link className="hover:text-primary/60" href="/contact">
                 Contact
               </Link>
             </li>
@@ -27,17 +27,17 @@ export default function Footer() {
           <h2 className="text-lg font-semibold">Resources</h2>
           <ul className="mt-2 space-y-1">
             <li>
-              <Link className="hover:text-primary/60" href="#">
+              <Link className="hover:text-primary/60" href="/help">
                 Help
               </Link>
             </li>
             <li>
-              <Link className="hover:text-primary/60" href="#">
+              <Link className="hover:text-primary/60" href="/help/faq">
                 FAQ
               </Link>
             </li>
             <li>
-              <Link className="hover:text-primary/60" href="#">
+              <Link className="hover:text-primary/60" href="/blog">
                 Blog
               </Link>
             </li>
@@ -47,12 +47,12 @@ export default function Footer() {
           <h2 className="text-lg font-semibold">Legal</h2>
           <ul className="mt-2 space-y-1">
             <li>
-              <Link className="hover:text-primary/60" href="#">
+              <Link className="hover:text-primary/60" href="/privacy">
                 Privacy
               </Link>
             </li>
             <li>
-              <Link className="hover:text-primary/60" href="#">
+              <Link className="hover:text-primary/60" href="/terms">
                 Terms
               </Link>
             </li>
@@ -62,20 +62,30 @@ export default function Footer() {
           <h2 className="text-lg font-semibold">Social</h2>
           <ul className="mt-2 space-y-1">
             <li>
-              <Link className="hover:text-primary/60" href="#">
+              <a
+                href="https://instagram.com/ausathikram"
+                className="hover:text-primary/60"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 Instagram
-              </Link>
+              </a>
             </li>
             <li>
-              <Link className="hover:text-primary/60" href="#">
+              <a
+                href="https://github.com/ausathdzil/planetary-swap"
+                className="hover:text-primary/60"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 GitHub
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
       </div>
       <div className="border-t pt-8">
-        <p className="text-md">&copy; 2024 Planetary. All rights reserved.</p>
+        <p className="text-md">&copy; 2025 Planetary. All rights reserved.</p>
       </div>
     </footer>
   );

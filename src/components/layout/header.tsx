@@ -37,20 +37,20 @@ export function Header() {
       </Link>
       <ul className="flex gap-8 ml-auto">
         <li>
-          <Link className="hover:underline underline-offset-4" href="#swap">
+          <Link className="hover:underline underline-offset-4" href="/swap">
             Swap
           </Link>
         </li>
         <li>
           <Link
             className="hover:underline underline-offset-4"
-            href="#marketplace"
+            href="/marketplace"
           >
             Marketplace
           </Link>
         </li>
         <li>
-          <Link className="hover:underline underline-offset-4" href="#blog">
+          <Link className="hover:underline underline-offset-4" href="/blog">
             Blog
           </Link>
         </li>

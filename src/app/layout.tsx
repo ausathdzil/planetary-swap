@@ -21,13 +21,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="shortcut icon" href="./logo.svg" type="image/svg" />
+      </head>
       <body
-        className={`${hankenGrotesk.variable} font-sans antialiased min-h-screen`}
+        className={`${hankenGrotesk.variable} font-sans antialiased flex flex-col min-h-screen`}
       >
         <Header />
-        <main className="flex flex-col items-center pb-12">
-          {children}
-        </main>
+        <main className="flex flex-col grow flex-1 items-center pb-12">{children}</main>
         <Footer />
       </body>
     </html>
