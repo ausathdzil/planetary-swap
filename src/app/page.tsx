@@ -58,7 +58,7 @@ function Hero() {
           </Button>
           <Link
             className="w-full text-background flex gap-2 items-center group"
-            href="#help"
+            href="#"
           >
             <Button className="w-full" size="lg" variant="ghost">
               <span>Learn how it works</span>
@@ -130,7 +130,7 @@ function Newsletter() {
     <section className="bg-primary text-primary-foreground w-full h-[400px] p-16 relative flex flex-col items-center justify-center overflow-hidden gap-8">
       <Meteors number={30} />
       <article className="text-center space-y-2">
-        <h1 className="text-4xl font-bold">Join our cosmic community</h1>
+        <h1 className="text-4xl font-bold">JOIN OUR COSMIC COMMUNITY</h1>
         <p>
           Sign up for our newsletter to get the latest updates on swaps,
           sustainable fashion tips, and exclusive cosmic offers.

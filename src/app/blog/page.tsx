@@ -13,7 +13,7 @@ const articles = [
   {
     title: 'Masa Depan Fashion Berkelanjutan di Indonesia',
     author: 'Ausath Ikram',
-    date: '1 Februari 2025',
+    date: '2025-01-20',
     summary:
       'Industri fashion di Indonesia terus berkembang pesat, namun di balik gemerlapnya dunia mode, terdapat dampak lingkungan yang cukup besar.',
     href: '/blog/masa-depan-fashion',
@@ -21,10 +21,26 @@ const articles = [
   {
     title: 'Tukar Pakaian, Solusi untuk Mengurangi Limbah Fashion',
     author: 'Aydie Rahma',
-    date: '15 Januari 2025',
+    date: '2025-01-10',
     summary:
       'Industri fashion menjadi salah satu penyumbang terbesar limbah tekstil di dunia. Setiap tahun, jutaan ton pakaian berakhir di tempat pembuangan sampah.',
     href: '/blog/tukar-pakaian',
+  },
+  {
+    title: 'Kisah Sukses Pengusaha Fashion Lokal',
+    author: 'Ausath Ikram',
+    date: '2025-01-05',
+    summary:
+      'Industri fashion lokal semakin berkembang pesat, berkat semangat para pengusaha muda yang berani mengambil risiko. Berikut kisah sukses mereka.',
+    href: '#',
+  },
+  {
+    title: 'Mengenal Lebih Dekat Teknik Shibori',
+    author: 'Aydie Rahma',
+    date: '2025-01-01',
+    summary:
+      'Shibori adalah teknik pewarnaan tekstil tradisional Jepang yang kini semakin populer di kalangan desainer fashion.',
+    href: '#',
   },
 ];
 
@@ -61,18 +77,26 @@ function ArticleCard({
   href: string;
 }) {
   return (
-    <Card className="h-[300px]">
+    <Card className="h-[300px] flex flex-col">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
-        <CardDescription>{author}</CardDescription>
-        <p>{date}</p>
+        <CardDescription>
+          {new Date(date).toLocaleDateString('id', {
+            month: 'long',
+            day: 'numeric',
+            year: 'numeric',
+          })}
+        </CardDescription>
+        <p>{author}</p>
       </CardHeader>
-      <CardContent>
+      <CardContent className="flex-grow">
         <p className="text-sm">{summary}</p>
       </CardContent>
-      <CardFooter>
+      <CardFooter className="mt-auto">
         <Link className="w-full" href={href}>
-          <Button className="w-full rounded-lg cursor-pointer">Read More</Button>
+          <Button className="w-full rounded-lg cursor-pointer">
+            Read More
+          </Button>
         </Link>
       </CardFooter>
     </Card>
