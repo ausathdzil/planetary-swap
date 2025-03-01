@@ -17,7 +17,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link className="hover:text-primary" href="/contact">
+              <Link className="hover:text-primary" href="/about#contact">
                 Contact
               </Link>
             </li>
@@ -27,12 +27,12 @@ export default function Footer() {
           <h2 className="text-lg text-primary font-semibold">Resources</h2>
           <ul className="mt-2 space-y-2">
             <li>
-              <Link className="hover:text-primary" href="/help">
+              <Link className="hover:text-primary" href="#">
                 Help
               </Link>
             </li>
             <li>
-              <Link className="hover:text-primary" href="/help/faq">
+              <Link className="hover:text-primary" href="#">
                 FAQ
               </Link>
             </li>
@@ -47,12 +47,12 @@ export default function Footer() {
           <h2 className="text-lg text-primary font-semibold">Legal</h2>
           <ul className="mt-2 space-y-2">
             <li>
-              <Link className="hover:text-primary" href="/privacy">
+              <Link className="hover:text-primary" href="#">
                 Privacy
               </Link>
             </li>
             <li>
-              <Link className="hover:text-primary" href="/terms">
+              <Link className="hover:text-primary" href="#">
                 Terms
               </Link>
             </li>

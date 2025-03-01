@@ -19,7 +19,7 @@ export default function PasswordInput() {
         <Input
           id={id}
           className="pe-9"
-          placeholder="Password"
+          placeholder="Enter your password"
           type={isVisible ? 'text' : 'password'}
         />
         <button
