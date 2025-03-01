@@ -1,10 +1,14 @@
 export default function Page() {
   return (
-    <section className="prose prose-zinc mt-32">
-      <article>
-        <h1>Tukar Pakaian, Solusi untuk Mengurangi Limbah Fashion</h1>
+    <section className="mt-32">
+      <article className="prose prose-zinc">
+        <p>10 Januari 2025</p>
 
-        <h2>Pendahuluan</h2>
+        <h1>Tukar Pakaian</h1>
+
+        <p>By Aydie Rahma</p>
+
+        <hr />
 
         <p>
           Industri fashion menjadi salah satu penyumbang terbesar limbah tekstil

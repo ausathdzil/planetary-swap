@@ -1,10 +1,15 @@
 export default function Page() {
   return (
-    <section className="prose prose-zinc mt-32">
-      <article>
-        <h1>Masa Depan Fashion Berkelanjutan di Indonesia</h1>
+    <section className="mt-32">
+      <article className="prose prose-zinc">
+        <p>20 Januari 2025</p>
 
-        <h2>Pendahuluan</h2>
+        <h1>Masa Depan Fashion Berkelanjutan</h1>
+
+        <p>By Ausath Ikram</p>
+
+        <hr />
+
         <p>
           Industri fashion di Indonesia terus berkembang pesat, namun di balik
           gemerlapnya dunia mode, terdapat dampak lingkungan yang cukup besar.
