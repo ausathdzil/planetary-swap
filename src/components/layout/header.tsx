@@ -57,7 +57,7 @@ export function Header() {
       </ul>
       <Link href="/login">
         <Button className="cursor-pointer" variant="outline" size="lg">
-          Start Trading
+          Get Started
         </Button>
       </Link>
     </header>

@@ -1,8 +1,9 @@
-import { ReviewCard, reviews } from '@/components/home/reviews';
+import { ReviewCard } from '@/components/home/reviews';
 import { Marquee } from '@/components/magicui/marquee';
 import { Meteors } from '@/components/magicui/meteors';
+import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import {
   Carousel,
   CarouselContent,
@@ -11,6 +12,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { Input } from '@/components/ui/input';
+import { productThumbnails, reviews } from '@/lib/data';
 import { ArrowRightIcon, RocketIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -83,12 +85,21 @@ function Featured() {
         }}
       >
         <CarouselContent>
-          {Array.from({ length: 10 }).map((_, index) => (
-            <CarouselItem key={index} className="basis-1/4">
+          {productThumbnails.map((product, i) => (
+            <CarouselItem key={i} className="basis-1/4">
               <Card>
                 <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-3xl font-semibold">{index + 1}</span>
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    width={250}
+                    height={250}
+                  />
                 </CardContent>
+                <CardFooter className="items-center justify-between">
+                  <p className="text-center font-medium">{product.name}</p>
+                  <Badge className="rounded-full">{product.price} CP</Badge>
+                </CardFooter>
               </Card>
             </CarouselItem>
           ))}
@@ -103,7 +114,7 @@ function Featured() {
 function Testimonials() {
   const firstRow = reviews.slice(0, reviews.length / 2);
   const secondRow = reviews.slice(reviews.length / 2);
-  
+
   return (
     <section className="w-full flex flex-col items-center gap-8 bg-gray-50 p-16">
       <h1 className="text-2xl font-bold">WHAT THEY SAY ABOUT US</h1>

@@ -1,34 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback } from '../ui/avatar';
 
-export const reviews = [
-  {
-    name: 'Alice',
-    review:
-      'I love Planetary Swap! I have swapped so many clothes and found some amazing pieces.',
-  },
-  {
-    name: 'Bob',
-    review:
-      'I have been using Planetary Swap for a few months now and I have saved so much money on clothes.',
-  },
-  {
-    name: 'Charlie',
-    review:
-      'I love the community on Planetary Swap. Everyone is so friendly and helpful.',
-  },
-  {
-    name: 'David',
-    review:
-      'I have found some amazing clothes on Planetary Swap. I would recommend it to anyone.',
-  },
-  {
-    name: 'Eve',
-    review:
-      'I have saved so much money on clothes by using Planetary Swap. It is so easy to use.',
-  },
-];
-
 export function ReviewCard({ name, review }: { name: string; review: string }) {
   const firstLetter = name.charAt(0).toUpperCase();
 
