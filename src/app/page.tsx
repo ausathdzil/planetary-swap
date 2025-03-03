@@ -87,7 +87,7 @@ function Featured() {
         <CarouselContent>
           {productThumbnails.map((product, i) => (
             <CarouselItem key={i} className="basis-1/4">
-              <Card className="group hover:border-primary transition-all">
+              <Card className="group hover:border-primary transition-colors">
                 <CardContent className="flex aspect-square items-center justify-center p-6">
                   <Image
                     className="group-hover:scale-105 transition-transform"
