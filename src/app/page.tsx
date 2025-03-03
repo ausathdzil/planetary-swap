@@ -74,6 +74,10 @@ function Hero() {
 }
 
 function Featured() {
+  const filteredProducts = productThumbnails.filter(
+    (product) => product.type === 'swap'
+  );
+
   return (
     <section className="w-full max-w-7xl flex flex-col items-center gap-8 mb-8">
       <h1 className="text-2xl font-bold">OUTER WORLD SWAPS</h1>
@@ -85,25 +89,27 @@ function Featured() {
         }}
       >
         <CarouselContent>
-          {productThumbnails.map((product, i) => (
+          {filteredProducts.map((product, i) => (
             <CarouselItem key={i} className="basis-1/4">
-              <Card className="group hover:border-primary transition-colors">
-                <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <Image
-                    className="group-hover:scale-105 transition-transform"
-                    src={product.image}
-                    alt={product.name}
-                    width={250}
-                    height={250}
-                  />
-                </CardContent>
-                <CardFooter className="items-center justify-between">
-                  <p className="text-center font-medium">{product.name}</p>
-                  <Badge className="rounded-full">
-                    <ArrowLeftRightIcon size={16} />
-                  </Badge>
-                </CardFooter>
-              </Card>
+              <Link href={product.href ? product.href : '#'}>
+                <Card className="group hover:border-primary transition-colors">
+                  <CardContent className="flex aspect-square items-center justify-center p-6">
+                    <Image
+                      className="group-hover:scale-105 transition-transform"
+                      src={product.image}
+                      alt={product.name}
+                      width={250}
+                      height={250}
+                    />
+                  </CardContent>
+                  <CardFooter className="items-center justify-between">
+                    <p className="text-center font-medium">{product.name}</p>
+                    <Badge className="rounded-full">
+                      <ArrowLeftRightIcon size={16} />
+                    </Badge>
+                  </CardFooter>
+                </Card>
+              </Link>
             </CarouselItem>
           ))}
         </CarouselContent>

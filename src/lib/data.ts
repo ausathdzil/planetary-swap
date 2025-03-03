@@ -5,6 +5,8 @@ import hoodieThumbnail from '../../public/thumbnails/hoodie-1.png';
 import shoesThumbnail from '../../public/thumbnails/shoes-4.png';
 import tShirtCirclesThumbnail from '../../public/thumbnails/t-shirt-circles-black.png';
 import tShirtSpiralThumbnail from '../../public/thumbnails/t-shirt-spiral-1.png';
+import blackBag from '../../public/thumbnails/bag-black.png';
+import hat from '../../public/thumbnails/hat-1.png';
 
 export const reviews = [
   {
@@ -87,38 +89,54 @@ export const articles = [
 
 export const productThumbnails = [
   {
-    name: 'Baby Cap',
-    price: 50,
-    image: babyCapThumbnail,
-  },
-  {
-    name: 'Baby Onesie',
-    price: 100,
-    image: babyOneSieThumbnail,
-  },
-  {
-    name: 'Cowboy Hat',
-    price: 50,
-    image: cowboyHatThumbnail,
-  },
-  {
-    name: 'Hoodie',
-    price: 200,
-    image: hoodieThumbnail,
-  },
-  {
-    name: 'Shoes',
-    price: 300,
-    image: shoesThumbnail,
-  },
-  {
     name: 'T-Shirt Circles',
     price: 100,
     image: tShirtCirclesThumbnail,
+    href: '/product/t-shirt-circles',
+    type: 'marketplace',
   },
   {
     name: 'T-Shirt Spiral',
     price: 100,
     image: tShirtSpiralThumbnail,
+    type: 'marketplace',
+  },
+  {
+    name: 'Cowboy Hat',
+    image: cowboyHatThumbnail,
+    type: 'swap',
+    href: '/product/cowboy-hat',
+  },
+  {
+    name: 'Baby Cap',
+    image: babyCapThumbnail,
+    type: 'swap',
+  },
+  {
+    name: 'Baby Onesie',
+    image: babyOneSieThumbnail,
+    type: 'swap',
+  },
+  {
+    name: 'Hoodie',
+    price: 200,
+    image: hoodieThumbnail,
+    type: 'marketplace',
+  },
+  {
+    name: 'Shoes',
+    image: shoesThumbnail,
+    type: 'swap',
+  },
+  {
+    name: 'Black Bag',
+    price: 150,
+    image: blackBag,
+    type: 'marketplace',
+  },
+  {
+    name: 'Hat',
+    image: hat,
+    type: 'swap',
   },
 ];
