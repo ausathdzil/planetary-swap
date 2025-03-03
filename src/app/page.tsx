@@ -13,7 +13,7 @@ import {
 } from '@/components/ui/carousel';
 import { Input } from '@/components/ui/input';
 import { productThumbnails, reviews } from '@/lib/data';
-import { ArrowRightIcon, RocketIcon } from 'lucide-react';
+import { ArrowLeftRightIcon, ArrowRightIcon, RocketIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -87,9 +87,10 @@ function Featured() {
         <CarouselContent>
           {productThumbnails.map((product, i) => (
             <CarouselItem key={i} className="basis-1/4">
-              <Card>
+              <Card className="group hover:border-primary transition-all">
                 <CardContent className="flex aspect-square items-center justify-center p-6">
                   <Image
+                    className="group-hover:scale-105 transition-transform"
                     src={product.image}
                     alt={product.name}
                     width={250}
@@ -98,7 +99,9 @@ function Featured() {
                 </CardContent>
                 <CardFooter className="items-center justify-between">
                   <p className="text-center font-medium">{product.name}</p>
-                  <Badge className="rounded-full">{product.price} CP</Badge>
+                  <Badge className="rounded-full">
+                    <ArrowLeftRightIcon size={16} />
+                  </Badge>
                 </CardFooter>
               </Card>
             </CarouselItem>
