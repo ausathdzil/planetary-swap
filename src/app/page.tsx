@@ -12,7 +12,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import { Input } from '@/components/ui/input';
-import { productThumbnails, reviews } from '@/lib/data';
+import { products, reviews } from '@/lib/data';
 import { ArrowLeftRightIcon, ArrowRightIcon, RocketIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -74,7 +74,7 @@ function Hero() {
 }
 
 function Featured() {
-  const filteredProducts = productThumbnails.filter(
+  const filteredProducts = products.filter(
     (product) => product.type === 'swap'
   );
 
@@ -96,7 +96,11 @@ function Featured() {
                   <CardContent className="flex aspect-square items-center justify-center p-6">
                     <Image
                       className="group-hover:scale-105 transition-transform"
-                      src={product.image}
+                      src={
+                        product.variants
+                          ? product.variants[0].image
+                          : product.image
+                      }
                       alt={product.name}
                       width={250}
                       height={250}

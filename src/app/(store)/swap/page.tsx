@@ -1,14 +1,12 @@
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
-import { productThumbnails } from '@/lib/data';
+import { products } from '@/lib/data';
 import { ArrowLeftRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function SwapPage() {
-  const filteredProduct = productThumbnails.filter(
-    (product) => product.type === 'swap'
-  );
+  const filteredProduct = products.filter((product) => product.type === 'swap');
 
   return (
     <div className="mt-4 grid grid-cols-3 gap-8">
@@ -21,7 +19,9 @@ export default function SwapPage() {
             <CardContent className="aspect-square">
               <Image
                 className="rounded-lg group-hover:scale-105 transition-transform"
-                src={product.image}
+                src={
+                  product.variants ? product.variants[0].image : product.image
+                }
                 alt={product.name}
               />
             </CardContent>

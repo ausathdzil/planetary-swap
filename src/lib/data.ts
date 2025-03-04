@@ -1,12 +1,13 @@
-import babyCapThumbnail from '../../public/thumbnails/baby-cap-white.png';
-import babyOneSieThumbnail from '../../public/thumbnails/baby-onesie-beige-1.png';
-import cowboyHatThumbnail from '../../public/thumbnails/cowboy-hat-tan-1.png';
-import hoodieThumbnail from '../../public/thumbnails/hoodie-1.png';
-import shoesThumbnail from '../../public/thumbnails/shoes-4.png';
-import tShirtCirclesThumbnail from '../../public/thumbnails/t-shirt-circles-black.png';
-import tShirtSpiralThumbnail from '../../public/thumbnails/t-shirt-spiral-1.png';
+import babyCap from '../../public/thumbnails/baby-cap-white.png';
+import babyOneSie from '../../public/thumbnails/baby-onesie-beige-1.png';
 import blackBag from '../../public/thumbnails/bag-black.png';
+import cowboyHat from '../../public/thumbnails/cowboy-hat-tan-1.png';
 import hat from '../../public/thumbnails/hat-1.png';
+import hoodie from '../../public/thumbnails/hoodie-1.png';
+import shoes from '../../public/thumbnails/shoes-4.png';
+import tShirtCircles from '../../public/thumbnails/t-shirt-circles-black.png';
+import tShirtCirclesBlue from '../../public/thumbnails/t-shirt-circles-blue.png';
+import tShirtSpiral from '../../public/thumbnails/t-shirt-spiral-1.png';
 
 export const reviews = [
   {
@@ -87,45 +88,56 @@ export const articles = [
   },
 ];
 
-export const productThumbnails = [
+export const products = [
   {
     name: 'T-Shirt Circles',
     price: 100,
-    image: tShirtCirclesThumbnail,
     href: '/product/t-shirt-circles',
     type: 'marketplace',
+    desc: 'A comfortable t-shirt with a unique design.',
+    variants: [
+      {
+        name: 'Black',
+        image: tShirtCircles,
+      },
+      {
+        name: 'Blue',
+        image: tShirtCirclesBlue,
+      },
+    ],
   },
   {
     name: 'T-Shirt Spiral',
     price: 100,
-    image: tShirtSpiralThumbnail,
+    image: tShirtSpiral,
     type: 'marketplace',
   },
   {
     name: 'Cowboy Hat',
-    image: cowboyHatThumbnail,
+    image: cowboyHat,
     type: 'swap',
     href: '/product/cowboy-hat',
+    desc: 'A stylish cowboy hat to complete your look.',
   },
   {
     name: 'Baby Cap',
-    image: babyCapThumbnail,
+    image: babyCap,
     type: 'swap',
   },
   {
     name: 'Baby Onesie',
-    image: babyOneSieThumbnail,
+    image: babyOneSie,
     type: 'swap',
   },
   {
     name: 'Hoodie',
     price: 200,
-    image: hoodieThumbnail,
+    image: hoodie,
     type: 'marketplace',
   },
   {
     name: 'Shoes',
-    image: shoesThumbnail,
+    image: shoes,
     type: 'swap',
   },
   {

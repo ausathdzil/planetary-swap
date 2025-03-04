@@ -1,6 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -22,14 +23,12 @@ export function Header() {
 
   return (
     <header
-      className={`
-        fixed w-full top-0 z-50 flex items-center py-8 px-16 gap-8 transition-all duration-300 bg-background 
-        ${
-          scrolled
-            ? 'bg-background/50 backdrop-blur-md shadow-sm'
-            : 'bg-transparent'
-        }
-      `}
+      className={cn(
+        'fixed w-full top-0 z-50 flex items-center py-8 px-16 gap-8 transition-all duration-300 bg-background',
+        scrolled
+          ? 'bg-background/50 backdrop-blur-md shadow-sm'
+          : 'bg-transparent'
+      )}
     >
       <Link href="/" className="flex items-center gap-4">
         <Logo />

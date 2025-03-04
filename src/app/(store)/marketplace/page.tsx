@@ -1,12 +1,12 @@
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
-import { productThumbnails } from '@/lib/data';
+import { products } from '@/lib/data';
 import { Circle } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function MarketplacePage() {
-  const filteredProduct = productThumbnails.filter(
+  const filteredProduct = products.filter(
     (product) => product.type === 'marketplace'
   );
 
@@ -21,7 +21,9 @@ export default function MarketplacePage() {
             <CardContent className="aspect-square">
               <Image
                 className="rounded-lg group-hover:scale-105 transition-transform"
-                src={product.image}
+                src={
+                  product.variants ? product.variants[0].image : product.image
+                }
                 alt={product.name}
               />
             </CardContent>
