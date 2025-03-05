@@ -138,7 +138,7 @@ export default function HelpPage() {
                   Using your points
                 </h3>
                 <p className="mb-4">
-                  Cosmic Points can be used to "purchase" items from other
+                  Cosmic Points can be used to &ldquo;purchase&ldquo; items from other
                   users, boost your listings for more visibility, or unlock
                   premium features like priority shipping and advanced filtering
                   options.
@@ -166,9 +166,9 @@ export default function HelpPage() {
           Ready to join the fashion revolution?
         </h2>
         <p className="text-lg mb-8 max-w-3xl mx-auto">
-          Planetary Swap is more than just a marketplace—it's a community of
+          Planetary Swap is more than just a marketplace—it&apos;s a community of
           fashion enthusiasts committed to sustainable consumption. By joining,
-          you're not only refreshing your wardrobe but also making a positive
+          you&apos;re not only refreshing your wardrobe but also making a positive
           impact on the planet.
         </p>
         <Button size="lg" className="group">
