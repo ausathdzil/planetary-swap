@@ -1,13 +1,17 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
+import { SearchIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +38,9 @@ export function Header() {
         <Logo />
         <h1 className="font-semibold text-xl">Planetary Swap</h1>
       </Link>
+
+      {(pathname === '/swap' || pathname === '/marketplace') && <SearchInput />}
+      
       <ul className="flex gap-8 ml-auto">
         <li>
           <Link className="hover:underline underline-offset-4" href="/swap">
@@ -54,6 +61,7 @@ export function Header() {
           </Link>
         </li>
       </ul>
+
       <Link href="/login">
         <Button className="cursor-pointer" variant="outline" size="lg">
           Get Started
@@ -72,5 +80,22 @@ export function Logo() {
       width={32}
       height={32}
     />
+  );
+}
+
+export default function SearchInput() {
+  return (
+    <div className="*:not-first:mt-2">
+      <div className="relative">
+        <Input
+          className="peer ps-9 pe-9 w-96 rounded-full"
+          placeholder="Search..."
+          type="search"
+        />
+        <div className="text-muted-foreground/80 pointer-events-none absolute inset-y-0 start-0 flex items-center justify-center ps-3 peer-disabled:opacity-50">
+          <SearchIcon size={16} />
+        </div>
+      </div>
+    </div>
   );
 }

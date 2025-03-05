@@ -1,6 +1,7 @@
 import babyCap from '../../public/thumbnails/baby-cap-white.png';
 import babyOneSie from '../../public/thumbnails/baby-onesie-beige-1.png';
 import blackBag from '../../public/thumbnails/bag-black.png';
+import cowboyHatBlack from '../../public/thumbnails/cowboy-hat-black-1.png';
 import cowboyHat from '../../public/thumbnails/cowboy-hat-tan-1.png';
 import hat from '../../public/thumbnails/hat-1.png';
 import hoodie from '../../public/thumbnails/hoodie-1.png';
@@ -118,6 +119,16 @@ export const products = [
     type: 'swap',
     href: '/product/cowboy-hat',
     desc: 'A stylish cowboy hat to complete your look.',
+    variants: [
+      {
+        name: 'Tan',
+        image: cowboyHat,
+      },
+      {
+        name: 'Black',
+        image: cowboyHatBlack,
+      },
+    ],
   },
   {
     name: 'Baby Cap',

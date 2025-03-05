@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/carousel';
 import { Separator } from '@/components/ui/separator';
 import { products } from '@/lib/data';
-import { Circle, ShoppingCartIcon } from 'lucide-react';
+import { ArrowLeftRightIcon, ShoppingCartIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -25,9 +25,7 @@ export default function MarketplaceProductPage() {
 }
 
 function Product() {
-  const product = products.find(
-    (product) => product.name === 'T-Shirt Circles'
-  );
+  const product = products.find((product) => product.name === 'Cowboy Hat');
 
   if (!product) {
     notFound();
@@ -60,9 +58,8 @@ function Product() {
         <div className="space-y-4">
           <h1 className="text-4xl font-bold">{product.name}</h1>
           <p className="text-lg">{product.desc}</p>
-          <Badge className="text-lg space-x-2">
-            <Circle color="#facc15" size={16} fill="#facc15" />
-            <span>{product.price}</span>
+          <Badge className="text-lg">
+            <ArrowLeftRightIcon size={16} />
           </Badge>
         </div>
         <Separator className="w-full" />
@@ -79,7 +76,7 @@ function Product() {
 
           <h3 className="text-2xl font-bold">Size</h3>
           <div className="flex items-center gap-4">
-            {['S', 'M', 'L', 'XL'].map((size, i) => (
+            {['S', 'M', 'L'].map((size, i) => (
               <Button disabled key={i} variant="outline">
                 {size}
               </Button>
@@ -98,8 +95,7 @@ function Product() {
 
 function RelatedProducts() {
   const filteredProducts = products.filter(
-    (product) =>
-      product.type === 'marketplace' && product.name !== 'T-Shirt Circles'
+    (product) => product.type === 'swap' && product.name !== 'Cowboy Hat'
   );
 
   return (
@@ -132,9 +128,8 @@ function RelatedProducts() {
                   </CardContent>
                   <CardFooter className="items-center justify-between">
                     <p className="text-center font-medium">{product.name}</p>
-                    <Badge className="rounded-full space-x-2">
-                      <Circle color="#facc15" size={16} fill="#facc15" />
-                      <span>{product.price}</span>
+                    <Badge className="rounded-full">
+                      <ArrowLeftRightIcon size={16} />
                     </Badge>
                   </CardFooter>
                 </Card>
