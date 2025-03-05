@@ -46,7 +46,7 @@ function ArticleCard({
     <Card className="h-full flex flex-col">
       <CardHeader>
         <CardDescription>
-          {new Date(date).toLocaleDateString('id', {
+          {new Date(date).toLocaleDateString('en-us', {
             month: 'long',
             day: 'numeric',
             year: 'numeric',

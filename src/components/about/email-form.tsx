@@ -10,22 +10,36 @@ export default function EmailForm() {
       <div className="flex gap-4">
         <div className="w-full space-y-1">
           <Label htmlFor="firstName">First Name</Label>
-          <Input type="text" id="firstName" name="firstName" />
+          <Input
+            className="bg-background"
+            type="text"
+            id="firstName"
+            name="firstName"
+          />
         </div>
         <div className="w-full space-y-1">
           <Label htmlFor="lastName">Last Name</Label>
-          <Input type="text" id="lastName" name="lastName" />
+          <Input
+            className="bg-background"
+            type="text"
+            id="lastName"
+            name="lastName"
+          />
         </div>
       </div>
 
       <div className="space-y-1">
         <Label htmlFor="email">Email</Label>
-        <Input type="email" id="email" name="email" />
+        <Input className="bg-background" type="email" id="email" name="email" />
       </div>
 
       <div className="space-y-1">
         <Label htmlFor="message">Message</Label>
-        <Textarea className="resize-none" id="message" name="message" />
+        <Textarea
+          className="resize-none bg-background"
+          id="message"
+          name="message"
+        />
       </div>
 
       <div className="flex justify-end">

@@ -40,51 +40,51 @@ export const reviews = [
 
 export const articles = [
   {
-    title: 'Masa Depan Fashion Berkelanjutan',
+    title: 'The Future of Sustainable Fashion',
     author: 'Ausath Ikram',
     date: '2025-01-20',
     summary:
-      'Industri fashion di Indonesia terus berkembang pesat, namun di balik gemerlapnya dunia mode, terdapat dampak lingkungan yang cukup besar.',
-    href: '/blog/masa-depan-fashion',
+      'The fashion industry in Indonesia continues to grow rapidly, but behind the glamour of the fashion world, there is a significant environmental impact.',
+    href: '/blog/future-of-fashion',
   },
   {
-    title: 'Tukar Pakaian',
+    title: 'Clothing Swap',
     author: 'Aydie Rahma',
     date: '2025-01-10',
     summary:
-      'Industri fashion menjadi salah satu penyumbang terbesar limbah tekstil di dunia. Setiap tahun, jutaan ton pakaian berakhir di tempat pembuangan sampah.',
-    href: '/blog/tukar-pakaian',
+      'The fashion industry is one of the largest contributors to textile waste in the world. Every year, millions of tons of clothing end up in landfills.',
+    href: '#',
   },
   {
-    title: 'Kisah Sukses Pengusaha Fashion Lokal',
+    title: 'Success Stories',
     author: 'Ausath Ikram',
     date: '2025-01-05',
     summary:
-      'Industri fashion lokal semakin berkembang pesat, berkat semangat para pengusaha muda yang berani mengambil risiko. Berikut kisah sukses mereka.',
+      'The local fashion industry is growing rapidly, thanks to the spirit of young entrepreneurs willing to take risks. Here are their success stories.',
     href: '#',
   },
   {
-    title: 'Mengenal Lebih Dekat Teknik Shibori',
+    title: 'A Closer Look at Shibori Technique',
     author: 'Aydie Rahma',
     date: '2025-01-01',
     summary:
-      'Shibori adalah teknik pewarnaan tekstil tradisional Jepang yang kini semakin populer di kalangan desainer fashion.',
+      'Shibori is a traditional Japanese textile dyeing technique that is becoming increasingly popular among fashion designers.',
     href: '#',
   },
   {
-    title: 'Mengenal Berbagai Jenis Kain',
+    title: 'Understanding Different Types of Fabric',
     author: 'Ausath Ikram',
     date: '2024-12-20',
     summary:
-      'Kain adalah bahan dasar pembuatan pakaian. Namun, tahukah Anda bahwa ada berbagai jenis kain?',
+      'Fabric is the basic material for making clothes. But did you know that there are various types of fabric?',
     href: '#',
   },
   {
-    title: 'Tips Memilih Pakaian yang Tepat',
+    title: 'Tips for Choosing the Right Clothing',
     author: 'Aydie Rahma',
     date: '2024-12-10',
     summary:
-      'Memilih pakaian yang tepat sesuai dengan bentuk tubuh dan warna kulit dapat membuat penampilan Anda semakin menarik.',
+      'Choosing the right clothes according to your body shape and skin tone can make your appearance more attractive.',
     href: '#',
   },
 ];
