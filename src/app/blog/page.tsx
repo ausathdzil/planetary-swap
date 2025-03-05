@@ -61,7 +61,7 @@ function ArticleCard({
       <CardFooter className="mt-auto">
         <Link className="w-full" href={href}>
           <Button className="w-full rounded-lg cursor-pointer">
-            Read More
+            Read more
           </Button>
         </Link>
       </CardFooter>

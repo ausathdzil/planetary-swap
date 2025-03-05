@@ -1,3 +1,5 @@
+'use client';
+
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
@@ -14,6 +16,7 @@ import { Circle, ShoppingCartIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { useState } from 'react';
 
 export default function MarketplaceProductPage() {
   return (
@@ -28,6 +31,12 @@ function Product() {
   const product = products.find(
     (product) => product.name === 'T-Shirt Circles'
   );
+
+  const [selectedColor, setSelectedColor] = useState('Black');
+  const [selectedSize, setSelectedSize] = useState('M');
+
+  const colors = product?.variants?.map((variant) => variant.name);
+  const sizes = product?.sizes;
 
   if (!product) {
     notFound();
@@ -70,17 +79,25 @@ function Product() {
         <div className="space-y-4">
           <h3 className="text-2xl font-bold">Color</h3>
           <div className="flex items-center gap-4">
-            {product.variants?.map((variant, i) => (
-              <Button disabled key={i} variant="outline">
-                {variant.name}
+            {colors?.map((color, i) => (
+              <Button
+                variant={selectedColor === color ? 'default' : 'outline'}
+                onClick={() => setSelectedColor(color)}
+                key={i}
+              >
+                {color}
               </Button>
             ))}
           </div>
 
           <h3 className="text-2xl font-bold">Size</h3>
           <div className="flex items-center gap-4">
-            {['S', 'M', 'L', 'XL'].map((size, i) => (
-              <Button disabled key={i} variant="outline">
+            {sizes?.map((size, i) => (
+              <Button
+                variant={selectedSize === size ? 'default' : 'outline'}
+                onClick={() => setSelectedSize(size)}
+                key={i}
+              >
                 {size}
               </Button>
             ))}

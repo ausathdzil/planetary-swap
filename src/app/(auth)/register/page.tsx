@@ -16,9 +16,7 @@ export default function RegisterPage() {
     <Card className="w-80">
       <CardHeader>
         <CardTitle>Register</CardTitle>
-        <CardDescription>
-          Join the fashion revolution.
-        </CardDescription>
+        <CardDescription>Join the fashion revolution.</CardDescription>
       </CardHeader>
       <CardContent>
         <form className="space-y-4">
@@ -37,7 +35,11 @@ export default function RegisterPage() {
           </label>
           <PasswordInput />
 
-          <Button className="w-full rounded-lg">Login</Button>
+          <Button className="w-full rounded-lg">
+            <Link className="w-full" href="/swap">
+              Register
+            </Link>
+          </Button>
         </form>
       </CardContent>
       <CardFooter>

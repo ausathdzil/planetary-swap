@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
-import { SearchIcon } from 'lucide-react';
+import { SearchIcon, ShoppingCartIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -40,7 +40,7 @@ export function Header() {
       </Link>
 
       {(pathname === '/swap' || pathname === '/marketplace') && <SearchInput />}
-      
+
       <ul className="flex gap-8 ml-auto">
         <li>
           <Link className="hover:underline underline-offset-4" href="/swap">
@@ -62,11 +62,23 @@ export function Header() {
         </li>
       </ul>
 
-      <Link href="/login">
-        <Button className="cursor-pointer" variant="outline" size="lg">
-          Get Started
-        </Button>
-      </Link>
+      <div className="flex items-center gap-4">
+        {!pathname.startsWith('/marketplace') &&
+          !pathname.startsWith('/swap') &&
+          !pathname.startsWith('/product') && (
+            <Link className="hover:underline underline-offset-4" href="/login">
+              Get Started
+            </Link>
+          )}
+
+        {(pathname.startsWith('/marketplace') ||
+          pathname.startsWith('/swap') ||
+          pathname.startsWith('/product')) && (
+          <Button variant="ghost">
+            <ShoppingCartIcon size={24} />
+          </Button>
+        )}
+      </div>
     </header>
   );
 }

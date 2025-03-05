@@ -96,6 +96,7 @@ export const products = [
     href: '/product/t-shirt-circles',
     type: 'marketplace',
     desc: 'A comfortable t-shirt with a unique design.',
+    sizes: ['S', 'M', 'L', 'XL'],
     variants: [
       {
         name: 'Black',
@@ -119,6 +120,7 @@ export const products = [
     type: 'swap',
     href: '/product/cowboy-hat',
     desc: 'A stylish cowboy hat to complete your look.',
+    sizes: ['S', 'M'],
     variants: [
       {
         name: 'Tan',

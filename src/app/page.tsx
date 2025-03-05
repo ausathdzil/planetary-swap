@@ -51,13 +51,23 @@ function Hero() {
           </p>
         </article>
         <div className="flex flex-col gap-4 w-1/6">
-          <Button size="lg" variant="outline">
-            Swap now
-          </Button>
-          <Button size="lg" variant="outline">
-            <span>Explore the cosmos</span>
-            <RocketIcon />
-          </Button>
+          <Link className="w-full" href="/swap">
+            <Button
+              className="w-full cursor-pointer"
+              variant="outline"
+              size="lg"
+            >
+              Swap now
+            </Button>
+          </Link>
+
+          <Link className="w-full" href="/marketplace">
+            <Button className="w-full cursor-pointer" variant="outline" size="lg">
+              Explore the cosmos
+              <RocketIcon />
+            </Button>
+          </Link>
+          
           <Link
             className="w-full text-background flex gap-2 items-center group"
             href="#"

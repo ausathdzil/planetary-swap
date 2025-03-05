@@ -30,7 +30,11 @@ export default function LoginPage() {
             Password
           </label>
           <PasswordInput />
-          <Button className="w-full rounded-lg">Login</Button>
+          <Button className="w-full rounded-lg">
+            <Link className="w-full" href="/swap">
+              Login
+            </Link>
+          </Button>
         </form>
       </CardContent>
       <CardFooter>
