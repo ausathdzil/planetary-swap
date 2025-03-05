@@ -27,13 +27,8 @@ export default function Footer() {
           <h2 className="text-lg text-primary font-semibold">Resources</h2>
           <ul className="mt-2 space-y-2">
             <li>
-              <Link className="hover:text-primary" href="#">
+              <Link className="hover:text-primary" href="/help">
                 Help
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-primary" href="#">
-                FAQ
               </Link>
             </li>
             <li>
@@ -69,16 +64,6 @@ export default function Footer() {
                 target="_blank"
               >
                 Instagram
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/ausathdzil/planetary-swap"
-                className="hover:text-primary"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                GitHub
               </a>
             </li>
           </ul>

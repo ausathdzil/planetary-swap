@@ -2,7 +2,7 @@
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
 import {
   Carousel,
   CarouselContent,
@@ -133,8 +133,9 @@ function RelatedProducts() {
           {filteredProducts.map((product, i) => (
             <CarouselItem key={i} className="basis-1/3">
               <Link href={product.href ? product.href : '#'}>
-                <Card className="group hover:border-primary transition-colors">
-                  <CardContent className="flex aspect-square items-center justify-center p-6">
+                <Card className="group hover:border-primary transition-colors h-full">
+                  <CardHeader></CardHeader>
+                  <CardContent className="aspect-square">
                     <Image
                       className="group-hover:scale-105 transition-transform"
                       src={
@@ -150,7 +151,7 @@ function RelatedProducts() {
                   <CardFooter className="items-center justify-between">
                     <p className="text-center font-medium">{product.name}</p>
                     <Badge className="rounded-full space-x-2">
-                      <Circle color="#facc15" size={16} fill="#facc15" />
+                      <Circle color="#facc15" size={12} fill="#facc15" />
                       <span>{product.price}</span>
                     </Badge>
                   </CardFooter>

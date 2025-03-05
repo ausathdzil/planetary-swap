@@ -25,7 +25,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="./logo.svg" type="image/svg" />
       </head>
       <body
-        className={`${hankenGrotesk.variable} font-sans antialiased flex flex-col min-h-screen`}
+        className={`${hankenGrotesk.variable} font-sans tracking-tight antialiased flex flex-col min-h-screen`}
       >
         <Header />
         <main className="flex flex-col grow flex-1 items-center pb-12">{children}</main>

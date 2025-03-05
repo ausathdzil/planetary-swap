@@ -70,9 +70,9 @@ function Hero() {
           
           <Link
             className="w-full text-background flex gap-2 items-center group"
-            href="#"
+            href="/help"
           >
-            <Button className="w-full" size="lg" variant="ghost">
+            <Button className="w-full cursor-pointer" size="lg" variant="ghost">
               <span>Learn how it works</span>
               <ArrowRightIcon className="transition-transform duration-300 group-hover:translate-x-1" />
             </Button>
